@@ -13,13 +13,13 @@
 #include <functional>
 
 template<typename Functor>
-void CallFunctorIfValueHasDivisor(size_t const value, Functor const func)
+void CallFunctorIfValueHasFactor(size_t const value, Functor const f)
 {
-    for (auto i = 2; i <= (value / 2); ++i)
+    for (auto currentFactor = 2; currentFactor <= (value / 2); ++currentFactor)
     {
-        if (value % i == 0)
+        if (value % currentFactor == 0)
         {
-            if (func(i))
+            if (f(currentFactor))
             {
                 break;
             }
@@ -32,25 +32,28 @@ bool isPrime(size_t const value)
 {
     bool isAPrime = true;
     
-    CallFunctorIfValueHasDivisor(value,
-                                 [&isAPrime] (size_t const) { isAPrime = false; return true; });
+    CallFunctorIfValueHasFactor(value,
+                                [&isAPrime] (size_t const)
+                                { isAPrime = false; return true; });
     
     return isAPrime;
 }
 
 void factor(size_t const value, size_t & largestPrimeFactor)
 {
-    CallFunctorIfValueHasDivisor(value, [&value, &largestPrimeFactor] (size_t const currentFactor)
-                                 {
-                                     factor(value / currentFactor, largestPrimeFactor);
-                                     
-                                     if (currentFactor > largestPrimeFactor && isPrime(currentFactor))
-                                     {
-                                         largestPrimeFactor = currentFactor;
-                                     }
-                                     
-                                     return false;
-                                 });
+    auto findLargestPrimeFactor = [&value, &largestPrimeFactor] (size_t const currentFactor)
+    {
+        factor(value / currentFactor, largestPrimeFactor);
+        
+        if (currentFactor > largestPrimeFactor && isPrime(currentFactor))
+        {
+            largestPrimeFactor = currentFactor;
+        }
+        
+        return false;
+    };
+    
+    CallFunctorIfValueHasFactor(value, findLargestPrimeFactor);
 }
 
 int main(int argc, const char * argv[])
