@@ -8,11 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		AA486D361EFA0D8D00D8E8AB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA486D351EFA0D8D00D8E8AB /* main.cpp */; };
+		AA486D411EFA1AD200D8E8AB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA486D401EFA1AD200D8E8AB /* main.cpp */; };
 		AA5B99471EFA07AA0089B79D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA5B99461EFA07AA0089B79D /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		AA486D311EFA0D8D00D8E8AB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		AA486D3C1EFA1AD200D8E8AB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -35,12 +45,21 @@
 /* Begin PBXFileReference section */
 		AA486D331EFA0D8D00D8E8AB /* Problem2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Problem2; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA486D351EFA0D8D00D8E8AB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AA486D3E1EFA1AD200D8E8AB /* Problem3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Problem3; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA486D401EFA1AD200D8E8AB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		AA5B99441EFA07AA0089B79D /* Problem1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Problem1; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5B99461EFA07AA0089B79D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AA486D301EFA0D8D00D8E8AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA486D3B1EFA1AD200D8E8AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,11 +84,20 @@
 			path = Problem2;
 			sourceTree = "<group>";
 		};
+		AA486D3F1EFA1AD200D8E8AB /* Problem3 */ = {
+			isa = PBXGroup;
+			children = (
+				AA486D401EFA1AD200D8E8AB /* main.cpp */,
+			);
+			path = Problem3;
+			sourceTree = "<group>";
+		};
 		AA5B992D1EFA07950089B79D = {
 			isa = PBXGroup;
 			children = (
 				AA5B99451EFA07AA0089B79D /* Problem1 */,
 				AA486D341EFA0D8D00D8E8AB /* Problem2 */,
+				AA486D3F1EFA1AD200D8E8AB /* Problem3 */,
 				AA5B99371EFA07950089B79D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +107,7 @@
 			children = (
 				AA5B99441EFA07AA0089B79D /* Problem1 */,
 				AA486D331EFA0D8D00D8E8AB /* Problem2 */,
+				AA486D3E1EFA1AD200D8E8AB /* Problem3 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +140,23 @@
 			productReference = AA486D331EFA0D8D00D8E8AB /* Problem2 */;
 			productType = "com.apple.product-type.tool";
 		};
+		AA486D3D1EFA1AD200D8E8AB /* Problem3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA486D421EFA1AD200D8E8AB /* Build configuration list for PBXNativeTarget "Problem3" */;
+			buildPhases = (
+				AA486D3A1EFA1AD200D8E8AB /* Sources */,
+				AA486D3B1EFA1AD200D8E8AB /* Frameworks */,
+				AA486D3C1EFA1AD200D8E8AB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Problem3;
+			productName = Problem3;
+			productReference = AA486D3E1EFA1AD200D8E8AB /* Problem3 */;
+			productType = "com.apple.product-type.tool";
+		};
 		AA5B99431EFA07AA0089B79D /* Problem1 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5B99481EFA07AA0089B79D /* Build configuration list for PBXNativeTarget "Problem1" */;
@@ -141,6 +187,10 @@
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
+					AA486D3D1EFA1AD200D8E8AB = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
 					AA5B99431EFA07AA0089B79D = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
@@ -161,6 +211,7 @@
 			targets = (
 				AA5B99431EFA07AA0089B79D /* Problem1 */,
 				AA486D321EFA0D8D00D8E8AB /* Problem2 */,
+				AA486D3D1EFA1AD200D8E8AB /* Problem3 */,
 			);
 		};
 /* End PBXProject section */
@@ -171,6 +222,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA486D361EFA0D8D00D8E8AB /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA486D3A1EFA1AD200D8E8AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA486D411EFA1AD200D8E8AB /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +252,20 @@
 			name = Debug;
 		};
 		AA486D381EFA0D8D00D8E8AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AA486D431EFA1AD200D8E8AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AA486D441EFA1AD200D8E8AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -313,6 +386,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AA486D421EFA1AD200D8E8AB /* Build configuration list for PBXNativeTarget "Problem3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA486D431EFA1AD200D8E8AB /* Debug */,
+				AA486D441EFA1AD200D8E8AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		AA5B99311EFA07950089B79D /* Build configuration list for PBXProject "Project Euler CPP" */ = {
 			isa = XCConfigurationList;
