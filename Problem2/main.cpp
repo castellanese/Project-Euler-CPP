@@ -16,8 +16,38 @@
 
 #include <iostream>
 
+inline bool isEven(size_t const value)
+{
+    return value % 2 == 0;
+}
+
 int main(int argc, const char * argv[])
 {
+    size_t const upperLimit{ 4000000 };
+    
+    size_t f1{ 1 };
+    size_t f2{ 1 };
+    size_t f3;
+    
+    size_t sumOfEvenFibs{ 0 };
+    
+    while (f1 < upperLimit)
+    {
+        f3 = f1 + f2;
+        
+        if (isEven(f3))
+        {
+            sumOfEvenFibs += f3;
+        }
+        
+        f1 = f2;
+        f2 = f3;
+        
+    }
 
+    std::cout << "The sum of all even fibonacci numbers under 4000000 is "
+    << sumOfEvenFibs
+    << std::endl;
+    
     return 0;
 }
