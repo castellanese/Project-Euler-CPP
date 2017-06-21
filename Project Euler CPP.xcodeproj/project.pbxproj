@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA486D361EFA0D8D00D8E8AB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA486D351EFA0D8D00D8E8AB /* main.cpp */; };
 		AA5B993A1EFA07950089B79D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA5B99391EFA07950089B79D /* main.cpp */; };
 		AA5B99471EFA07AA0089B79D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA5B99461EFA07AA0089B79D /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		AA486D311EFA0D8D00D8E8AB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		AA5B99341EFA07950089B79D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA486D331EFA0D8D00D8E8AB /* Problem2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Problem2; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA486D351EFA0D8D00D8E8AB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		AA5B99361EFA07950089B79D /* Project Euler CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Project Euler CPP"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5B99391EFA07950089B79D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		AA5B99441EFA07AA0089B79D /* Problem1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Problem1; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AA486D301EFA0D8D00D8E8AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA5B99331EFA07950089B79D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,11 +76,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA486D341EFA0D8D00D8E8AB /* Problem2 */ = {
+			isa = PBXGroup;
+			children = (
+				AA486D351EFA0D8D00D8E8AB /* main.cpp */,
+			);
+			path = Problem2;
+			sourceTree = "<group>";
+		};
 		AA5B992D1EFA07950089B79D = {
 			isa = PBXGroup;
 			children = (
 				AA5B99381EFA07950089B79D /* Project Euler CPP */,
 				AA5B99451EFA07AA0089B79D /* Problem1 */,
+				AA486D341EFA0D8D00D8E8AB /* Problem2 */,
 				AA5B99371EFA07950089B79D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +99,7 @@
 			children = (
 				AA5B99361EFA07950089B79D /* Project Euler CPP */,
 				AA5B99441EFA07AA0089B79D /* Problem1 */,
+				AA486D331EFA0D8D00D8E8AB /* Problem2 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +123,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AA486D321EFA0D8D00D8E8AB /* Problem2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA486D391EFA0D8D00D8E8AB /* Build configuration list for PBXNativeTarget "Problem2" */;
+			buildPhases = (
+				AA486D2F1EFA0D8D00D8E8AB /* Sources */,
+				AA486D301EFA0D8D00D8E8AB /* Frameworks */,
+				AA486D311EFA0D8D00D8E8AB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Problem2;
+			productName = Problem2;
+			productReference = AA486D331EFA0D8D00D8E8AB /* Problem2 */;
+			productType = "com.apple.product-type.tool";
+		};
 		AA5B99351EFA07950089B79D /* Project Euler CPP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5B993D1EFA07950089B79D /* Build configuration list for PBXNativeTarget "Project Euler CPP" */;
@@ -137,6 +183,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = castellanese;
 				TargetAttributes = {
+					AA486D321EFA0D8D00D8E8AB = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
 					AA5B99351EFA07950089B79D = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
@@ -161,11 +211,20 @@
 			targets = (
 				AA5B99351EFA07950089B79D /* Project Euler CPP */,
 				AA5B99431EFA07AA0089B79D /* Problem1 */,
+				AA486D321EFA0D8D00D8E8AB /* Problem2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AA486D2F1EFA0D8D00D8E8AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA486D361EFA0D8D00D8E8AB /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA5B99321EFA07950089B79D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +244,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		AA486D371EFA0D8D00D8E8AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AA486D381EFA0D8D00D8E8AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		AA5B993B1EFA07950089B79D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,6 +378,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AA486D391EFA0D8D00D8E8AB /* Build configuration list for PBXNativeTarget "Problem2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA486D371EFA0D8D00D8E8AB /* Debug */,
+				AA486D381EFA0D8D00D8E8AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AA5B99311EFA07950089B79D /* Build configuration list for PBXProject "Project Euler CPP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -321,6 +402,7 @@
 				AA5B993F1EFA07950089B79D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA5B99481EFA07AA0089B79D /* Build configuration list for PBXNativeTarget "Problem1" */ = {
 			isa = XCConfigurationList;
@@ -329,6 +411,7 @@
 				AA5B994A1EFA07AA0089B79D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
