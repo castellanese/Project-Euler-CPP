@@ -10,33 +10,47 @@
 //
 
 #include <iostream>
+#include <functional>
 
-bool isPrime(size_t const value)
+template<typename Functor>
+void CallFunctorIfValueHasDivisor(size_t const value, Functor const func)
 {
     for (auto i = 2; i <= (value / 2); ++i)
     {
         if (value % i == 0)
         {
-            return false;
+            if (func(i))
+            {
+                break;
+            }
         }
     }
-    return true;
+}
+
+
+bool isPrime(size_t const value)
+{
+    bool isAPrime = true;
+    
+    CallFunctorIfValueHasDivisor(value,
+                                 [&isAPrime] (size_t const) { isAPrime = false; return true; });
+    
+    return isAPrime;
 }
 
 void factor(size_t const value, size_t & largestPrimeFactor)
 {
-    for (auto i = 2; i <= (value / 2); i++)
-    {
-        if (value % i == 0)
-        {
-            factor(value / i, largestPrimeFactor);
-            
-            if (i > largestPrimeFactor && isPrime(i))
-            {
-                largestPrimeFactor = i;
-            }
-        }
-    }
+    CallFunctorIfValueHasDivisor(value, [&value, &largestPrimeFactor] (size_t const currentFactor)
+                                 {
+                                     factor(value / currentFactor, largestPrimeFactor);
+                                     
+                                     if (currentFactor > largestPrimeFactor && isPrime(currentFactor))
+                                     {
+                                         largestPrimeFactor = currentFactor;
+                                     }
+                                     
+                                     return false;
+                                 });
 }
 
 int main(int argc, const char * argv[])
@@ -46,6 +60,11 @@ int main(int argc, const char * argv[])
     
     factor(numberToBeFactored, largestFactor);
     
-    std::cout << largestFactor << std::endl;
+    std::cout << "Largest prime factor of "
+    << numberToBeFactored
+    << " is "
+    << largestFactor
+    << std::endl;
+    
     return 0;
 }
