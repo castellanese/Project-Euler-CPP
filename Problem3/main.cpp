@@ -15,11 +15,13 @@
 template<typename Functor>
 void CallFunctorIfValueHasFactor(size_t const value, Functor const f)
 {
+    bool stopSearching = true;
+    
     for (auto currentFactor = 2; currentFactor <= (value / 2); ++currentFactor)
     {
         if (value % currentFactor == 0)
         {
-            if (f(currentFactor))
+            if (f(currentFactor) == stopSearching)
             {
                 break;
             }
