@@ -11,51 +11,22 @@
 
 #include <iostream>
 #include <functional>
+#include "ProblemUtilities.h"
 
-template<typename Functor>
-void CallFunctorIfValueHasFactor(size_t const value, Functor const f)
+void factor(size_t const value, size_t & largestPrimeFactor)
 {
-    bool stopSearching = true;
-    
     for (auto currentFactor = 2; currentFactor <= (value / 2); ++currentFactor)
     {
         if (value % currentFactor == 0)
         {
-            if (f(currentFactor) == stopSearching)
+            factor(value / currentFactor, largestPrimeFactor);
+            
+            if (currentFactor > largestPrimeFactor && num::isPrime(currentFactor))
             {
-                break;
+                largestPrimeFactor = currentFactor;
             }
         }
     }
-}
-
-
-bool isPrime(size_t const value)
-{
-    bool isAPrime = true;
-    
-    CallFunctorIfValueHasFactor(value,
-                                [&isAPrime] (size_t const)
-                                { isAPrime = false; return true; });
-    
-    return isAPrime;
-}
-
-void factor(size_t const value, size_t & largestPrimeFactor)
-{
-    auto findLargestPrimeFactor = [&value, &largestPrimeFactor] (size_t const currentFactor)
-    {
-        factor(value / currentFactor, largestPrimeFactor);
-        
-        if (currentFactor > largestPrimeFactor && isPrime(currentFactor))
-        {
-            largestPrimeFactor = currentFactor;
-        }
-        
-        return false;
-    };
-    
-    CallFunctorIfValueHasFactor(value, findLargestPrimeFactor);
 }
 
 int main(int argc, const char * argv[])

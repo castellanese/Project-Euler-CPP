@@ -71,6 +71,7 @@
 		AA5B99461EFA07AA0089B79D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		AA5DFD201F06771C00BD046D /* Problem5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Problem5; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5DFD221F06771C00BD046D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AA5DFD291F06A45500BD046D /* ProblemUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProblemUtilities.h; path = include/ProblemUtilities.h; sourceTree = "<group>"; };
 		AAFDA1F31F056F85000CC256 /* Problem4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Problem4; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFDA1F51F056F85000CC256 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +134,7 @@
 		AA5B992D1EFA07950089B79D = {
 			isa = PBXGroup;
 			children = (
+				AA5DFD271F069FFF00BD046D /* include */,
 				AA5B99451EFA07AA0089B79D /* Problem1 */,
 				AA486D341EFA0D8D00D8E8AB /* Problem2 */,
 				AA486D3F1EFA1AD200D8E8AB /* Problem3 */,
@@ -168,6 +170,14 @@
 				AA5DFD221F06771C00BD046D /* main.cpp */,
 			);
 			path = Problem5;
+			sourceTree = "<group>";
+		};
+		AA5DFD271F069FFF00BD046D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AA5DFD291F06A45500BD046D /* ProblemUtilities.h */,
+			);
+			name = include;
 			sourceTree = "<group>";
 		};
 		AAFDA1F41F056F85000CC256 /* Problem4 */ = {
@@ -567,6 +577,7 @@
 				AA5DFD251F06771C00BD046D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAFDA1F91F056F85000CC256 /* Build configuration list for PBXNativeTarget "Problem4" */ = {
 			isa = XCConfigurationList;

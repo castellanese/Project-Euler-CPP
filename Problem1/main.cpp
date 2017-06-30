@@ -13,6 +13,7 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
+#include "ProblemUtilities.h"
 
 std::vector<size_t> GenerateMultiplesOf(size_t const multiplier,
                                         size_t const largestMultiplier)
@@ -29,10 +30,11 @@ std::vector<size_t> GenerateMultiplesOf(size_t const multiplier,
     return mults;
 }
 
-std::vector<size_t> ComputeUnion(std::vector<size_t> const v1,
-                                 std::vector<size_t> const v2)
+template<typename Numeric>
+inline std::vector<Numeric> ComputeUnion(std::vector<Numeric> const v1,
+                                         std::vector<Numeric> const v2)
 {
-    std::vector<size_t> result;
+    std::vector<Numeric> result;
     std::set_union(v1.begin(),
                    v1.end(),
                    v2.begin(),

@@ -15,13 +15,9 @@
 //
 
 #include <iostream>
+#include "ProblemUtilities.h"
 
-inline bool isEven(size_t const value)
-{
-    return value % 2 == 0;
-}
-
-int main(int argc, const char * argv[])
+int main()
 {
     size_t const upperLimit{ 4000000 };
     
@@ -35,7 +31,7 @@ int main(int argc, const char * argv[])
     {
         f3 = f1 + f2;
         
-        if (isEven(f3))
+        if (num::isEven(f3))
         {
             sumOfEvenFibs += f3;
         }

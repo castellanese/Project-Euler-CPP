@@ -14,6 +14,7 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include "ProblemUtilities.h"
 
 std::vector<size_t> SplitNumberIntoDigits(size_t number)
 {
@@ -31,16 +32,11 @@ std::vector<size_t> SplitNumberIntoDigits(size_t number)
     return digitsOfNumber;
 }
 
-inline bool isEven(size_t const number)
-{
-    return number % 2 == 0;
-}
-
 bool isPalindrome(size_t product)
 {
     std::vector<size_t> digitsOfProduct = SplitNumberIntoDigits(product);
     
-    if (!isEven(digitsOfProduct.size()))
+    if (!num::isEven(digitsOfProduct.size()))
     {
         return false;
     }
